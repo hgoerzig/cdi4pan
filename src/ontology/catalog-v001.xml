@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
+
+  
+  
+  
+
+
+  
+  <uri name="http://www.purl.org/cdi4pan/cdpn/components/cdi4pan.owl" uri="components/cdi4pan.owl"/>
+  
+
+</group>
+</catalog>

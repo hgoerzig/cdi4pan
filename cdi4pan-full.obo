@@ -1,0 +1,14 @@
+format-version: 1.2
+data-version: http://www.purl.org/cdi4pan/cdpn/releases/2024-11-01/cdi4pan-full.owl
+idspace: dce http://purl.org/dc/elements/1.1/ 
+idspace: dcterms http://purl.org/dc/terms/ 
+ontology: http://www.purl.org/cdi4pan/cdpn/cdi4pan-full.owl
+property_value: dcterms:description "None" xsd:string
+property_value: dcterms:license https://creativecommons.org/licenses/CC0
+property_value: dcterms:title "CDI for PaN data" xsd:string
+property_value: owl:versionInfo "2024-11-01" xsd:string
+
+[Term]
+id: CDI4PAN:0000000
+name: root node
+

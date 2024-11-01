@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/cdi4pan
+
+idspace: CDI4PAN
+base_url: /obo/cdi4pan
+
+products:
+- cdi4pan.owl: https://raw.githubusercontent.com/hgoerzig/cdi4pan/main/cdi4pan.owl
+- cdi4pan.obo: https://raw.githubusercontent.com/hgoerzig/cdi4pan/main/cdi4pan.obo
+
+term_browser: ontobee
+example_terms:
+- CDI4PAN_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/hgoerzig/cdi4pan/v
+
+- prefix: /tracker/
+  replacement: https://github.com/hgoerzig/cdi4pan/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/CDI4PAN?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/hgoerzig/cdi4pan/main/
+

@@ -1,0 +1,29 @@
+id: cdi4pan
+title: "CDI for PaN data"
+uribase: http://www.purl.org/cdi4pan
+uribase_suffix: cdpn
+license: https://creativecommons.org/licenses/CC0
+github_org: hgoerzig
+git_main_branch: main
+repo: cdi4pan
+release_artefacts:
+  - base
+  - full
+  - simple
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+components:
+  products:
+    - filename: cdi4pan.owl
+robot_java_args: "-Xmx4G"
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit
+documentation: 
+  documentation_system: mkdocs
