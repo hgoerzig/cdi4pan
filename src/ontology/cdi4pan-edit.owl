@@ -1,5 +1,4 @@
-
-Prefix(:=<http://www.purl.org/cdi4pan/cdi4pan.owl#>)
+Prefix(:=<http://www.purl.org/cdi4pan/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -10,36 +9,28 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://www.purl.org/cdi4pan/cdi4pan.owl>
-
-
-
-
+Import(<http://www.purl.org/cdi4pan/cdpn/imports/cdi_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/CC0>)
 Annotation(dcterms:title "CDI for PaN data")
 
-
-Declaration(Class(<http://www.purl.org/cdi4pan/CDI4PAN_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
-############################
-#   Classes
-############################
-
-# Class: <http://www.purl.org/cdi4pan/CDI4PAN_0000000> (root node)
-
-AnnotationAssertion(rdfs:label <http://www.purl.org/cdi4pan/CDI4PAN_0000000> "root node"@en)
-
-
 )
-

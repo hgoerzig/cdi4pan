@@ -13,15 +13,11 @@
         "val" : "CDI for PaN data"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-11-01"
+        "val" : "2024-11-06"
       } ],
-      "version" : "http://www.purl.org/cdi4pan/cdpn/releases/2024-11-01/cdi4pan-simple.json"
+      "version" : "http://www.purl.org/cdi4pan/cdpn/releases/2024-11-06/cdi4pan-simple.json"
     },
     "nodes" : [ {
-      "id" : "http://www.purl.org/cdi4pan/CDI4PAN_0000000",
-      "lbl" : "root node",
-      "type" : "CLASS"
-    }, {
       "id" : "http://purl.org/dc/terms/description",
       "lbl" : "description",
       "type" : "PROPERTY",

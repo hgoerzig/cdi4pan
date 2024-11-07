@@ -15,6 +15,9 @@ export_formats:
   - owl
   - obo
   - json
+import_group:
+  products:
+    - id: cdi
 components:
   products:
     - filename: cdi4pan.owl

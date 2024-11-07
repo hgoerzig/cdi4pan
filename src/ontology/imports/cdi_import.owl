@@ -1,0 +1,260 @@
+Prefix(:=<http://www.purl.org/cdi4pan/cdpn/imports/cdi_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.purl.org/cdi4pan/cdpn/imports/cdi_import.owl>
+<http://www.purl.org/cdi4pan/cdpn/releases/2024-11-06/imports/cdi_import.owl>
+Annotation(owl:versionInfo "2024-11-06")
+
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ControlledVocabularyEntry>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Identifier>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/InstanceVariable>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Key>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/KeyValueStructure>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataSet>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataStructure>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongKey>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit>))
+Declaration(Class(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier>))
+Declaration(ObjectProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType>))
+Declaration(DataProperty(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> (uses)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> "The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the \"DDI-Cross Domain Integration: Detailed Model\" document."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> "uses")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> "Concept_uses_Concept")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept_uses_Concept> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind> (unitOfMeasureKind)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind> "Kind of unit of measure, so that it may be prone to translation to equivalent UOMs. Example values include \"acceleration,\" \"temperature,\" \"salinity\", etc. This description exists at the conceptual level, indicating a limitation on the type of representations which may be used for the variable as it is made more concrete."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind> "unitOfMeasureKind")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable-unitOfMeasureKind> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ControlledVocabularyEntry>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> (measures)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> "The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the \"DDI-Cross Domain Integration: Detailed Model\" document."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> "measures")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> "ConceptualVariable_measures_UnitType")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable_measures_UnitType> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure> (isStructuredBy)
+
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure> "isStructuredBy")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure> "DataSet_isStructuredBy_DataStructure")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet_isStructuredBy_DataStructure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier> (identifier)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier> "Identifier for objects requiring short- or long-lasting referencing and management."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier> "identifier")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Identifier>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> (isDefinedBy)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> "Data structure component is defined by zero to one represented variable."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> "isDefinedBy")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> "DataStructureComponent_isDefinedBy_RepresentedVariable")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent_isDefinedBy_RepresentedVariable> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent> (has)
+
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent> "has")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent> "DataStructure_has_DataStructureComponent")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_DataStructureComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey> (has)
+
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey> "has")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey> "DataStructure_has_ForeignKey")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure_has_ForeignKey> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier> (identifier)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier> "Identifier for objects requiring short- or long-lasting referencing and management."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier> "identifier")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Identifier>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent> (correspondsTo)
+
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent> "correspondsTo")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent> "ForeignKeyComponent_correspondsTo_DataStructureComponent")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_correspondsTo_DataStructureComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent> (references)
+
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent> "references")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent> "ForeignKeyComponent_references_PrimaryKeyComponent")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent_references_PrimaryKeyComponent> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier> (identifier)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier> "Identifier for objects requiring short- or long-lasting referencing and management."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier> "identifier")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent-identifier> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Identifier>)
+
+# Object Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> (has)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> "The unit type of the unit."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> "has")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> "Unit_has_UnitType")
+ObjectPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit>)
+ObjectPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit_has_UnitType> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure> (simpleUnitOfMeasure)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure> "The unit in which the data values are measured (kg, pound, euro), expressed as a simple string, in cases where no additional information is available (in the legacy system) or needed (as in the case of broad agreement within the community of use [i.e., ISO country codes, currencies, etc. in SDMX])"@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure> "simpleUnitOfMeasure")
+DataPropertyDomain(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable>)
+DataPropertyRange(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable-simpleUnitOfMeasure> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept> (Concept)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept> "Definition n============ nUnit of thought differentiated by characteristics (from the Generic Statistical Information Model version 1.2: https://statswiki.unece.org/display/clickablegsim/Concept).  nnExamples n========== nVelocity, Distance, Poverty, Income, Household Relationship, Family, Gender, Business Establishment, Satisfaction, Mass, Air Quality, etc.nnnExplanatory notes n=================== nMany DDI-CDI classes are subtypes of the concept class including category, universe, unit type, conceptual variable."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept> "Concept")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable> (ConceptualVariable)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable> "Definition n============ nA variable at the highest level of abstraction.n  nExamples n========== nA gender variable defining two categories – \"male\" and \"female\" allowing relating each of these to concepts having description of how these categories are decided.nnExplanatory notes n=================== nThe conceptual variable allows for describing the domain of concepts it can take on as well as the type of unit that can be measured. A conceptual variable for blood pressure might, for example describe the conditions under which the pressure is to be taken (sitting as opposed to standing) and a conceptual value domain as height of mercury – without units. One represented variable would further refine this by specifying inches as the unit of measurement for the height. Another might specify that the height be represented in centimeters. Both represented variables could reference the same conceptual variable to indicate in what way they are comparable."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable> "ConceptualVariable")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet> (DataSet)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet> "Definition n============ nOrganized collection of data based on keys."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet> "DataSet")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure> (DataStructure)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure> "Definition n============nData organization based on reusable data structure components."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure> "DataStructure")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent> (DataStructureComponent)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent> "Definition n============ nRole given to a represented variable in the context of a data structure.  nnExplanatory notes n=================== nA represented variable can have different roles in different data structures. For instance, the variable sex can be a measure in a wide data structure and a dimension in a dimensional data structure."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructureComponent> "DataStructureComponent")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey> (ForeignKey)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey> "Definitionn============nRole of a set of data structure components for content referencing purposesnnExplanatory notesn===================nEquivalent to foreign key in the relational model.nIt can be used in conjunction with primary key to link data structures and their related data sets."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKey> "ForeignKey")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent> (ForeignKeyComponent)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent> "Definitionn============nRole of a data structure component for content referencing purposesnnExplanatory notesn===================nEquivalent to a foreign key attribute (i.e. column) in the relational model.nIt can be used in conjunction with a primary key component to link data structures and their related data sets."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ForeignKeyComponent> "ForeignKeyComponent")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/InstanceVariable> (InstanceVariable)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/InstanceVariable> "Definitionn==========nUse of a represented variable within a data set.  nnExamplesn======== n1. Gender: Dan Gillman has gender <m, male>, Arofan Gregory has gender <m, male>, etc.n2. Number of employees: Microsoft has 90,000 employees; IBM has 433,000 employees, etc.n3. Endowment: Johns Hopkins has endowment of <3, $1,000,000 and above>, Yale has endowment of <3, $1,000,000 and above>, etc.n4. A tornado near Winterset, Iowa, had a peak wind speed of 170 mph. Two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable.nnExplanatory notesn================= nThe instance variable class inherits all of the properties and relationships of the represented variable class and, in turn, the conceptual variable class. This means that an instance variable can be completely populated without the need to create an associated represented variable or conceptual variable. If, however, a user wishes to indicate that a particular instance variable is patterned after a particular represented variable or a particular conceptual variable that may be indicated by including a relationship to the represented variable and/or conceptual variable. Including these references is an important method of indicating that multiple instance variables have the same representation, measure the same concept, and are drawn from the same universe. If two instance variables of a person's height reference the same represented variable. This indicates that they are intended to: be measured with the same unit of measurement, have the same intended data type, have the same substantive value domain, use a sentinel value domain drawn from the same set of sentinel value domains, have the same sentinel (missing value) concepts, and draw their population from the same universe. In other words, the two instance variables should be comparable. The instance variable describes actual instances of data that have been collected."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/InstanceVariable> "InstanceVariable")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/InstanceVariable> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Key> (Key)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Key> "Definition n============ nCollection of data instances that uniquely identify a collection of data points in a dataset."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Key> "Key")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/KeyValueStructure> (KeyValueStructure)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/KeyValueStructure> "Definitionn============nStructure of a key-value datastore (organized collection of key-value data). It is described by identifier, contextual, synthetic id, dimension, variable descriptor and variable value components.nnExamplesn==========nThe structure described by [Income distribution, Unit id, Period, Income] where Income distribution is the contextual component, Unit id identifies a statistical unit, period is a effective period and Income is the variable of interest."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/KeyValueStructure> "KeyValueStructure")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/KeyValueStructure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataSet> (LongDataSet)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataSet> "Definitionn============nOrganized collection of long data. It is structured by a long data structure.nnExamplesn==========nA unit dataset where each row corresponds to a set of data points capturing different characteristics of a unit, some of which can be transposed into variable descriptor and variable value components."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataSet> "LongDataSet")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataSet> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataSet>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataStructure> (LongDataStructure)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataStructure> "Definitionn============nStructure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.nnExamplesn==========nThe structure described by [Unit id, Income, Province, Variable name, Variable value] where Unit id identifies a statistical unit, Income and Province are two instance variables capturing characteristics, and other instance variables are represented by Variable name (a variable descriptor component) and Variable Value (a variable value component)."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataStructure> "LongDataStructure")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongDataStructure> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/DataStructure>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongKey> (LongKey)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongKey> "Definitionn============nCollection of data instances that uniquely identify a collection of data points in a long dataset.nnExamplesn==========nCollection containing the single \"K1Z1C1\" string in a long dataset where rows are identified by postal code representations."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongKey> "LongKey")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/LongKey> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Key>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent> (PrimaryKeyComponent)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent> "Definitionn============nRole of a data structure component for content identification purposesnnExplanatory notesn===================nEquivalent to a primary key attribute (i.e. column) in the relational model.nIt can be used in conjunction with a foreign key component to link data structures and their related datasets."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/PrimaryKeyComponent> "PrimaryKeyComponent")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable> (RepresentedVariable)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable> "Definition n========== nConceptual variable with a substantive value domain specified.   nnExamples n========== nThe pair (Number of Employees, Integer), where \"Number of Employees\" is the characteristic of the population (variable) and \"Integer\" is how that measure will be represented (value domain).  nnExplanatory notes n=================== nExtends from conceptual variable and can contain all descriptive fields without creating a conceptual variable. By referencing a conceptual variable it can indicate a common relationship with represented variables expressing the same characteristic of a universe measured in another way, such as Age of Persons in hours rather than years. Represented variable constrains the coverage of the unit type to a specific universe. In the above case the universe with the measurement of Age in hours may be constrained to Persons under 5 days (120 hours old). Represented variable can define sentinel values for multiple storage systems which have the same conceptual domain but specialized value domains."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable> "RepresentedVariable")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/RepresentedVariable> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/ConceptualVariable>)
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit> (Unit)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit> "Definitionn==========nIndividual object of interest for some statistical activity, such as data collection.nnExamplesn========nHere are 3 examples:nn1. Individual US person (i.e., Arofan Gregory, Dan Gillman, Barack Obama, etc.)n2. Individual US computer companies (i.e., Microsoft, Apple, IBM, etc.)n3. Individual US universities (i.e., Johns Hopkins, University of Maryland, Yale, etc.) [GSIM 1.1]nnExplanatory notesn=================nIn a traditional data table each column might represent some variable (measurement). Each row would represent the entity (Unit)  to which those variables relate. Height measurements might be made on persons (unit type) of primary school age (Universe) at Pinckney Elementary School on September 1, 2005 (population). The height for Mary Roe (Unit)  might be 139 cm.nnThe Unit is not invariably tied to some value. A median income might be calculated for a block in the U.S. but then used as an attribute of a person residing on that block. For the initial measurement the Unit was the block. In the reuse the unit would be that specific person to which the value was applied.nnIn a big data table each row represents a unit/variable double. Together a unit identifier and a variable identifier define the key. And for each key there is just one value – the measure of the unit on the variable.nnA big data table is sometimes referred to as a column-oriented data store whereas a traditional database is sometimes referred to as a row-oriented data store. The unit plays an identifier role in both types of data stores."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Unit> "Unit")
+
+# Class: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType> (UnitType)
+
+AnnotationAssertion(rdfs:comment <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType> "Definitionn==========nUnit type is a type or class of objects of interest (units).nnExamplesn========nPerson, Establishment, Household, State, Country, Dog, Automobile, Neutrino.nnExplanatory notesn=================nUnit type is the most general in the hierarchy of unit type, universe, and population. It is a description of the basic characteristics for a general set of Units. A universe is a set of entities defined by a specialization of a unit type. A Population further narrows the specification to a specific time and geography.nnA unit type is used to describe a class or group of Units based on a single characteristic with no specification of time and geography. For example, the unit type of \"Person\" groups together a set of Units based on the characteristic that they are \"Persons\".nnIt concerns not only unit types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit. [GSIM 1.1]."@en)
+AnnotationAssertion(rdfs:label <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType> "UnitType")
+SubClassOf(<http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/UnitType> <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/Concept>)
+
+
+)

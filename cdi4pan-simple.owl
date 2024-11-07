@@ -8,11 +8,11 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.purl.org/cdi4pan/cdpn/cdi4pan-simple.owl">
-        <owl:versionIRI rdf:resource="http://www.purl.org/cdi4pan/cdpn/releases/2024-11-01/cdi4pan-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://www.purl.org/cdi4pan/cdpn/releases/2024-11-06/cdi4pan-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/CC0"/>
         <terms:title>CDI for PaN data</terms:title>
-        <owl:versionInfo>2024-11-01</owl:versionInfo>
+        <owl:versionInfo>2024-11-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -49,25 +49,6 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:label>title</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.purl.org/cdi4pan/CDI4PAN_0000000 -->
-
-    <owl:Class rdf:about="http://www.purl.org/cdi4pan/CDI4PAN_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 
