@@ -41,16 +41,20 @@ Missing ?????
 In order to work with real data the following example was downloaded from the RefXAS database:  
 [http://xafsdb.ddns.net/dataset/details/PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba?](http://xafsdb.ddns.net/dataset/details/PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba?)  
 TODO: This data can be expressed in RefXAS, XDI, and NeXus.(still need to convert to XDI and NeXus)  
-To start the table of the RefXAS (file)[example/PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba_metaData.txt] was uploaded to (https://ddi-cdi-converter-app.azurewebsites.net/)[https://ddi-cdi-converter-app.azurewebsites.net/]. 
+To start the table of the RefXAS (file)[example/PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba_metaData.txt] was uploaded to [https://ddi-cdi-converter-app.azurewebsites.net/](https://ddi-cdi-converter-app.azurewebsites.net/). 
 This gave me a [json-ld ](example/PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba_metaData_DDICDI.jsonld) structure of the table expressed in DDI-CDI. I did not upload the whole file because I have no clue how to deal with the header.  
-The file I have uploaed hasthree columns:  
+
+The file I have uploaded has three columns and looks like this:  
 ![example/RefXAS-columns.PNG](example/RefXAS-columns.PNG)  
-This is an overview of the instance variables:  
+
+The ddi.cdi converter gave me back a json-ld file with an overview of the instance variables:  
 ![example/overview-instanceVariable.PNG](example/overview-instanceVariable.PNG)  
+
 The contents of the Energy column Instance variable is:  
 ![example/contentes-instanceVariableEnergy.PNG](example/contentes-instanceVariableEnergy.PNG)  
 
-Having the instance variables, they can now be connected to the variable cascade. As we had three different files one concept of the variable cascade will now lead to three instance variables on for each file type (TODO: once we have created them for XDI and NeXus). As we had the same original file thus the same units are applied the instance variables will only have one representative variable. TODO: As I am working with RDF/XML syntax the json-ld needs to be transformed.
+Having the instance variables, they can now be connected to the variable cascade. As we had three different files one ConceptVariable of the variable cascade will now cascade down to three instance variables as each file type will have one instance variable. These three instance variable will express the same concept. The XDI file and the NeXus file still nedd to created, but theoretically it will be like this.(TODO: once we have created them for XDI and NeXus). As we had the same original file thus the same units are applied and we will only have one representative variable.  
+TODO: As I am working with RDF/XML syntax the json-ld needs to be transformed.
 
 
 For the Units also QUDT with cdi:ControlledVocabularyEntry and  cdi:RepresentedVariable-describedUnitOfMeasure coud be used.
