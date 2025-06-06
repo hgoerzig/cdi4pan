@@ -1,0 +1,32 @@
+# comment: Manual integration of the DMPinfoPool ontologie with related ontologies.										
+# curie_map:										
+# cd4pan: http://www.purl.org/cdi4pan/cdpn/										
+#   cdif: http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/										
+#   orcid: https://orcid.org/										
+#   owl: http://www.w3.org/2002/07/owl#										
+#   panet: http://purl.org/pan-science/PaNET/										
+#   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#										
+#   rdfs: http://www.w3.org/2000/01/rdf-schema#										
+#   semapv: https://w3id.org/semapv/vocab/										
+#   skos: http://www.w3.org/2004/02/skos/core#										
+#   sssom: https://w3id.org/sssom/										
+#   wikidata: https://www.wikidata.org/wiki/										
+# license: https://creativecommons.org/licenses/by/4.0/										
+# mapping_date: '2024-01-17'										
+# mapping_set_description: Manual integration of the DMPinfoPool ontologie with related ontologies.										
+# mapping_set_id: http://www.purl.org/dmpinfopool/DMPinfoPool/mappings.sssom.tsv										
+# mapping_set_version: '2024-01-17'										
+# object_source: http://www.purl.org/dmpinfopool/DMPinfoPool/										
+# object_source_version: http://www.purl.org/dmpinfopool/DMPinfoPool/releases/dmpinfopool										
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	object_source_version	mapping_date	confidence	comment
+cd4pan:instanceVariable- NormalizedRefXAS	Instance variable RefXAS Normalized	rdf:type	cdif:InstanceVariable	InstanceVariable	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:instanceVariable-Normalized-XDI	Instance variable XDI Normalized	rdf:type	cdif:InstanceVariable	InstanceVariable	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:instanceVariable-Normalized-NeXus	Instance variable NeXus Normalized	rdf:type	cdif:InstanceVariable	InstanceVariable	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:representiveVariable-Normalized	Representive variable Normalized	rdf:type	cdif:RepresentedVariable	RepresentedVariable	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:instanceVariable- NormalizedRefXAS	Instance variable RefXAS Normalized	cdif:uses	cd4pan:representiveVariable-Normalized	RepresentedVariable Normalized	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:instanceVariable-Normalized-XDI	Instance variable XDI Normalized	cdif:uses	cd4pan:representiveVariable-Normalized	RepresentedVariable Normalized	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:instanceVariable-Normalized-NeXus	Instance variable NeXus Normalized	cdif:uses	cd4pan:representiveVariable-Normalized	RepresentedVariable Normalized	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:representiveVariable-Normalized	Representive variable Normalized				semapv:ManualMappingCuration	orcid:0000-0001-9121-8644		2025-06-06		
+cd4pan:representiveVariable-Normalized	Representive variable Normalized	dif:RepresentedVariable-simpleUnitOfMeasure	eV	eV	semapv:ManualMappingCuration	orcid:0000-0001-9121-8645		2025-06-06		
+cd4pan:conceptualVariable-Normalized	Conceptual variable Normalized	rdf:type	cdif:ConceptualVariable	ConceptualVariable	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	
+cd4pan:representiveVariable-Normalized	Representive variable Normalized	cdif:uses	cd4pan:conceptualVariable-Normalized	Conceptual variable Normalized	semapv:ManualMappingCuration	orcid:0000-0001-9121-8643		2025-06-06	1.0	

@@ -1,0 +1,234 @@
+{
+    "@context": [
+        "https://docs.ddialliance.org/DDI-CDI/1.0/model/encoding/json-ld/ddi-cdi.jsonld",
+        {
+            "skos": "http://www.w3.org/2004/02/skos/core#"
+        }
+    ],
+    "DDICDIModels": [
+        {
+            "@id": "#physicalDataSet",
+            "@type": "PhysicalDataSet",
+            "allowsDuplicates": false,
+            "physicalFileName": "PID.SAMPLE.PREFIX683cae10-2de9-4cbf-895a-5c09eff530ba_metaData.csv",
+            "correspondsTo_DataSet": "#wideDataSet",
+            "formats": "#dataStore",
+            "has_PhysicalRecordSegment": [
+                "#physicalRecordSegment"
+            ]
+        },
+        {
+            "@id": "#physicalRecordSegment",
+            "@type": "PhysicalRecordSegment",
+            "mapsTo": "#logicalRecord",
+            "has_PhysicalSegmentLayout": "#physicalSegmentLayout",
+            "has_DataPointPosition": []
+        },
+        {
+            "@id": "#physicalSegmentLayout",
+            "@type": "PhysicalSegmentLayout",
+            "allowsDuplicates": false,
+            "formats": "#logicalRecord",
+            "isDelimited": "true",
+            "isFixedWidth": false,
+            "delimiter": ",",
+            "has_ValueMappingPosition": [
+                "#valueMappingPosition-# Energy",
+                "#valueMappingPosition- Mu",
+                "#valueMappingPosition- Normalized:"
+            ]
+        },
+        {
+            "@id": "#valueMapping-# Energy",
+            "@type": "ValueMapping",
+            "defaultValue": "",
+            "formats": []
+        },
+        {
+            "@id": "#valueMapping- Mu",
+            "@type": "ValueMapping",
+            "defaultValue": "",
+            "formats": []
+        },
+        {
+            "@id": "#valueMapping- Normalized:",
+            "@type": "ValueMapping",
+            "defaultValue": "",
+            "formats": []
+        },
+        {
+            "@id": "#valueMappingPosition-# Energy",
+            "@type": "ValueMappingPosition",
+            "value": 0,
+            "indexes": "#valueMapping-# Energy"
+        },
+        {
+            "@id": "#valueMappingPosition- Mu",
+            "@type": "ValueMappingPosition",
+            "value": 1,
+            "indexes": "#valueMapping- Mu"
+        },
+        {
+            "@id": "#valueMappingPosition- Normalized:",
+            "@type": "ValueMappingPosition",
+            "value": 2,
+            "indexes": "#valueMapping- Normalized:"
+        },
+        {
+            "@id": "#dataStore",
+            "@type": "DataStore",
+            "allowsDuplicates": false,
+            "recordCount": 11,
+            "has_LogicalRecord": [
+                "#logicalRecord"
+            ]
+        },
+        {
+            "@id": "#logicalRecord",
+            "@type": "LogicalRecord",
+            "organizes": "#wideDataSet",
+            "has_InstanceVariable": [
+                "#instanceVariable-# Energy",
+                "#instanceVariable- Mu",
+                "#instanceVariable- Normalized:"
+            ]
+        },
+        {
+            "@id": "#wideDataSet",
+            "@type": "WideDataSet",
+            "isStructuredBy": "#wideDataStructure"
+        },
+        {
+            "@id": "#wideDataStructure",
+            "@type": "WideDataStructure",
+            "has_DataStructureComponent": [
+                "#measureComponent-# Energy",
+                "#measureComponent- Mu",
+                "#measureComponent- Normalized:"
+            ]
+        },
+        {
+            "@id": "#measureComponent-# Energy",
+            "@type": "MeasureComponent",
+            "isDefinedBy_RepresentedVariable": "#instanceVariable-# Energy"
+        },
+        {
+            "@id": "#measureComponent- Mu",
+            "@type": "MeasureComponent",
+            "isDefinedBy_RepresentedVariable": "#instanceVariable- Mu"
+        },
+        {
+            "@id": "#measureComponent- Normalized:",
+            "@type": "MeasureComponent",
+            "isDefinedBy_RepresentedVariable": "#instanceVariable- Normalized:"
+        },
+        {
+            "@id": "#instanceVariable-# Energy",
+            "@type": "InstanceVariable",
+            "physicalDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "numeric"
+            },
+            "displayLabel": {
+                "@type": "LabelForDisplay",
+                "locationVariant": {
+                    "@type": "ControlledVocabularyEntry",
+                    "entryValue": "# Energy"
+                }
+            },
+            "name": {
+                "@type": "ObjectName",
+                "name": "# Energy"
+            },
+            "has_PhysicalSegmentLayout": "#physicalSegmentLayout",
+            "has_ValueMapping": "#valueMapping-# Energy",
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": "#substantiveValueDomain-# Energy"
+        },
+        {
+            "@id": "#instanceVariable- Mu",
+            "@type": "InstanceVariable",
+            "physicalDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "numeric"
+            },
+            "displayLabel": {
+                "@type": "LabelForDisplay",
+                "locationVariant": {
+                    "@type": "ControlledVocabularyEntry",
+                    "entryValue": " Mu"
+                }
+            },
+            "name": {
+                "@type": "ObjectName",
+                "name": " Mu"
+            },
+            "has_PhysicalSegmentLayout": "#physicalSegmentLayout",
+            "has_ValueMapping": "#valueMapping- Mu",
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": "#substantiveValueDomain- Mu"
+        },
+        {
+            "@id": "#instanceVariable- Normalized:",
+            "@type": "InstanceVariable",
+            "physicalDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "numeric"
+            },
+            "displayLabel": {
+                "@type": "LabelForDisplay",
+                "locationVariant": {
+                    "@type": "ControlledVocabularyEntry",
+                    "entryValue": " Normalized:"
+                }
+            },
+            "name": {
+                "@type": "ObjectName",
+                "name": " Normalized:"
+            },
+            "has_PhysicalSegmentLayout": "#physicalSegmentLayout",
+            "has_ValueMapping": "#valueMapping- Normalized:",
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": "#substantiveValueDomain- Normalized:"
+        },
+        {
+            "@id": "#substantiveValueDomain-# Energy",
+            "@type": "SubstantiveValueDomain",
+            "recommendedDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "https://www.w3.org/TR/xmlschema-2/#decimal"
+            },
+            "isDescribedBy": "#substantiveValueAndConceptDescription-# Energy"
+        },
+        {
+            "@id": "#substantiveValueDomain- Mu",
+            "@type": "SubstantiveValueDomain",
+            "recommendedDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "https://www.w3.org/TR/xmlschema-2/#decimal"
+            },
+            "isDescribedBy": "#substantiveValueAndConceptDescription- Mu"
+        },
+        {
+            "@id": "#substantiveValueDomain- Normalized:",
+            "@type": "SubstantiveValueDomain",
+            "recommendedDataType": {
+                "@type": "ControlledVocabularyEntry",
+                "entryValue": "https://www.w3.org/TR/xmlschema-2/#decimal"
+            },
+            "isDescribedBy": "#substantiveValueAndConceptDescription- Normalized:"
+        },
+        {
+            "@id": "#substantiveValueAndConceptDescription-# Energy",
+            "@type": "ValueAndConceptDescription",
+            "classificationLevel": "Continuous"
+        },
+        {
+            "@id": "#substantiveValueAndConceptDescription- Mu",
+            "@type": "ValueAndConceptDescription",
+            "classificationLevel": "Continuous"
+        },
+        {
+            "@id": "#substantiveValueAndConceptDescription- Normalized:",
+            "@type": "ValueAndConceptDescription",
+            "classificationLevel": "Continuous"
+        }
+    ]
+}
